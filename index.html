@@ -10,15 +10,15 @@
 
   <meta
     name="description"
-    content="HireLens is an interview practice application for students, fresh graduates, and job seekers."
+    content="HireLens is an interview practice studio for students, fresh graduates, and job seekers."
   >
 
   <meta
     name="theme-color"
-    content="#f6f8fb"
+    content="#f4f5f2"
   >
 
-  <title>HireLens — Interview Practice</title>
+  <title>HireLens — Interview Studio</title>
 
   <link
     rel="preconnect"
@@ -51,40 +51,36 @@
     Skip to content
   </a>
 
+  <div class="top-rule"></div>
+
   <header class="site-header">
 
     <a
       class="brand"
-      href="#"
       id="brandLink"
+      href="#"
       aria-label="HireLens home"
     >
 
-      <span class="brand-mark">
-        H
+      <span class="brand-symbol">
+        HL
       </span>
 
-      <span class="brand-copy">
-
-        <strong>
-          HireLens
-        </strong>
-
-        <small>
-          Interview Practice
-        </small>
-
+      <span class="brand-name">
+        HireLens
       </span>
 
     </a>
 
-    <div class="header-status">
+    <div class="header-center">
+      Interview Studio
+    </div>
+
+    <div class="header-stage">
 
       <span class="status-dot"></span>
 
-      <span>
-        Stage 1 · Preset Practice
-      </span>
+      STAGE 01 / PRESET PRACTICE
 
     </div>
 
@@ -101,213 +97,371 @@
       aria-labelledby="setupTitle"
     >
 
-      <div class="setup-intro">
+      <div class="setup-hero">
 
-        <p class="eyebrow">
-          Interview Practice / 01
-        </p>
+        <div class="setup-index">
+          01 / SESSION BRIEF
+        </div>
 
-        <h1 id="setupTitle">
-          Practice the interview,
-          <span>not a score.</span>
-        </h1>
+        <div class="setup-title-block">
 
-        <p class="setup-description">
-          Choose a role and interview style.
-          HireLens will build a preset practice session
-          that you can answer by typing or using
-          browser speech recognition.
-        </p>
+          <p class="eyebrow">
+            INTERVIEW REHEARSAL
+          </p>
+
+          <h1 id="setupTitle">
+            Practice the
+            <span>conversation.</span>
+          </h1>
+
+          <p class="setup-description">
+            Build a structured practice interview,
+            answer by typing or speaking, then review
+            exactly what you said after the session.
+          </p>
+
+        </div>
+
+        <div class="setup-principles">
+
+          <div>
+
+            <span>
+              01
+            </span>
+
+            <p>
+              One question at a time.
+            </p>
+
+          </div>
+
+          <div>
+
+            <span>
+              02
+            </span>
+
+            <p>
+              Type or transcribe.
+            </p>
+
+          </div>
+
+          <div>
+
+            <span>
+              03
+            </span>
+
+            <p>
+              Review, don't guess.
+            </p>
+
+          </div>
+
+        </div>
 
         <div class="stage-note">
 
-          <strong>
-            Current version
-          </strong>
+          <span>
+            CURRENT BUILD
+          </span>
 
           <p>
-            Stage 1 uses carefully prepared question banks.
-            AI feedback and contextual follow-up questions
-            will be added in Stage 2.
+            Stage 1 uses prepared interview question banks.
+            AI-generated questions, contextual follow-ups,
+            and detailed feedback arrive in Stage 2.
           </p>
 
         </div>
 
       </div>
 
-      <form
-        class="setup-form"
-        id="setupForm"
-      >
+      <div class="setup-panel">
 
-        <div class="form-heading">
+        <div class="panel-heading">
+
+          <div>
+
+            <span>
+              SESSION CONFIGURATION
+            </span>
+
+            <strong>
+              Build your interview
+            </strong>
+
+          </div>
 
           <span>
-            SESSION SETUP
+            4 INPUTS
           </span>
 
-          <small>
-            4 settings
-          </small>
-
         </div>
 
-        <div class="form-field">
-
-          <label for="jobRole">
-            Job role
-          </label>
-
-          <p>
-            Choose the position you want to practice for.
-          </p>
-
-          <select
-            id="jobRole"
-            name="jobRole"
-            required
-          >
-
-            <option value="frontend">
-              Frontend Developer
-            </option>
-
-            <option value="software">
-              Software Developer
-            </option>
-
-            <option value="qa">
-              QA Engineer
-            </option>
-
-            <option value="it-support">
-              IT Support Specialist
-            </option>
-
-          </select>
-
-        </div>
-
-        <div class="form-field">
-
-          <label for="interviewType">
-            Interview type
-          </label>
-
-          <p>
-            Behavioral, technical, or a combination of both.
-          </p>
-
-          <select
-            id="interviewType"
-            name="interviewType"
-            required
-          >
-
-            <option value="behavioral">
-              Behavioral
-            </option>
-
-            <option
-              value="technical"
-              selected
-            >
-              Technical
-            </option>
-
-            <option value="mixed">
-              Mixed
-            </option>
-
-          </select>
-
-        </div>
-
-        <div class="form-field">
-
-          <label for="difficulty">
-            Difficulty
-          </label>
-
-          <p>
-            Changes the depth and complexity of the questions.
-          </p>
-
-          <select
-            id="difficulty"
-            name="difficulty"
-            required
-          >
-
-            <option value="easy">
-              Easy
-            </option>
-
-            <option
-              value="medium"
-              selected
-            >
-              Medium
-            </option>
-
-            <option value="hard">
-              Hard
-            </option>
-
-          </select>
-
-        </div>
-
-        <div class="form-field">
-
-          <label for="questionCount">
-            Number of questions
-          </label>
-
-          <p>
-            Pick a session length that fits your available time.
-          </p>
-
-          <select
-            id="questionCount"
-            name="questionCount"
-            required
-          >
-
-            <option value="5">
-              5 questions
-            </option>
-
-            <option
-              value="8"
-              selected
-            >
-              8 questions
-            </option>
-
-            <option value="10">
-              10 questions
-            </option>
-
-          </select>
-
-        </div>
-
-        <p
-          class="form-error"
-          id="setupError"
-          role="alert"
-        ></p>
-
-        <button
-          class="primary-button start-button"
-          type="submit"
+        <form
+          class="setup-form"
+          id="setupForm"
         >
-          Start Interview
-          <span>→</span>
-        </button>
 
-      </form>
+          <div class="form-field">
+
+            <span class="field-number">
+              01
+            </span>
+
+            <div class="field-copy">
+
+              <label for="jobRole">
+                Role
+              </label>
+
+              <p>
+                What position are you preparing for?
+              </p>
+
+            </div>
+
+            <select
+              id="jobRole"
+              name="jobRole"
+              required
+            >
+
+              <option value="frontend">
+                Frontend Developer
+              </option>
+
+              <option value="software">
+                Software Developer
+              </option>
+
+              <option value="qa">
+                QA Engineer
+              </option>
+
+              <option value="it-support">
+                IT Support Specialist
+              </option>
+
+            </select>
+
+          </div>
+
+          <div class="form-field">
+
+            <span class="field-number">
+              02
+            </span>
+
+            <div class="field-copy">
+
+              <label for="interviewType">
+                Interview mode
+              </label>
+
+              <p>
+                Choose the type of conversation.
+              </p>
+
+            </div>
+
+            <select
+              id="interviewType"
+              name="interviewType"
+              required
+            >
+
+              <option value="behavioral">
+                Behavioral
+              </option>
+
+              <option
+                value="technical"
+                selected
+              >
+                Technical
+              </option>
+
+              <option value="mixed">
+                Mixed
+              </option>
+
+            </select>
+
+          </div>
+
+          <div class="form-field">
+
+            <span class="field-number">
+              03
+            </span>
+
+            <div class="field-copy">
+
+              <label for="difficulty">
+                Difficulty
+              </label>
+
+              <p>
+                Control the depth of the questions.
+              </p>
+
+            </div>
+
+            <select
+              id="difficulty"
+              name="difficulty"
+              required
+            >
+
+              <option value="easy">
+                Easy
+              </option>
+
+              <option
+                value="medium"
+                selected
+              >
+                Medium
+              </option>
+
+              <option value="hard">
+                Hard
+              </option>
+
+            </select>
+
+          </div>
+
+          <div class="form-field">
+
+            <span class="field-number">
+              04
+            </span>
+
+            <div class="field-copy">
+
+              <label for="questionCount">
+                Session length
+              </label>
+
+              <p>
+                Pick the number of questions.
+              </p>
+
+            </div>
+
+            <select
+              id="questionCount"
+              name="questionCount"
+              required
+            >
+
+              <option value="5">
+                5 Questions
+              </option>
+
+              <option
+                value="8"
+                selected
+              >
+                8 Questions
+              </option>
+
+              <option value="10">
+                10 Questions
+              </option>
+
+            </select>
+
+          </div>
+
+          <div class="session-preview">
+
+            <span>
+              SESSION PREVIEW
+            </span>
+
+            <div class="preview-grid">
+
+              <div>
+
+                <small>
+                  ROLE
+                </small>
+
+                <strong id="previewRole">
+                  Frontend Developer
+                </strong>
+
+              </div>
+
+              <div>
+
+                <small>
+                  MODE
+                </small>
+
+                <strong id="previewType">
+                  Technical
+                </strong>
+
+              </div>
+
+              <div>
+
+                <small>
+                  LEVEL
+                </small>
+
+                <strong id="previewDifficulty">
+                  Medium
+                </strong>
+
+              </div>
+
+              <div>
+
+                <small>
+                  LENGTH
+                </small>
+
+                <strong id="previewCount">
+                  8 Questions
+                </strong>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <p
+            class="form-error"
+            id="setupError"
+            role="alert"
+          ></p>
+
+          <button
+            class="primary-button start-button"
+            type="submit"
+          >
+
+            <span>
+              Start Session
+            </span>
+
+            <span>
+              →
+            </span>
+
+          </button>
+
+        </form>
+
+      </div>
 
     </section>
 
@@ -317,66 +471,49 @@
       aria-labelledby="questionText"
     >
 
-      <aside class="session-sidebar">
+      <div class="interview-strip">
 
-        <div>
+        <span>
+          SESSION 001
+        </span>
 
-          <p class="sidebar-label">
-            ACTIVE SESSION
-          </p>
+        <strong id="sessionRole">
+          Frontend Developer
+        </strong>
 
-          <h2 id="sessionRole">
-            Frontend Developer
-          </h2>
+        <span id="sessionType">
+          Technical
+        </span>
 
-        </div>
+        <span id="sessionDifficulty">
+          Medium
+        </span>
 
-        <dl class="session-details">
+        <span>
+          <strong id="sessionQuestionTotal">
+            8
+          </strong>
+          QUESTIONS
+        </span>
 
-          <div>
+        <button
+          class="end-session-link"
+          id="endSessionButton"
+          type="button"
+        >
+          End Session
+        </button>
 
-            <dt>
-              TYPE
-            </dt>
+      </div>
 
-            <dd id="sessionType">
-              Technical
-            </dd>
+      <div class="interview-layout">
 
-          </div>
+        <aside class="progress-rail">
 
-          <div>
-
-            <dt>
-              DIFFICULTY
-            </dt>
-
-            <dd id="sessionDifficulty">
-              Medium
-            </dd>
-
-          </div>
-
-          <div>
-
-            <dt>
-              QUESTIONS
-            </dt>
-
-            <dd id="sessionQuestionTotal">
-              8
-            </dd>
-
-          </div>
-
-        </dl>
-
-        <div class="sidebar-progress">
-
-          <div class="sidebar-progress-top">
+          <div class="progress-rail-top">
 
             <span>
-              Session Progress
+              PROGRESS
             </span>
 
             <strong id="sidebarProgressText">
@@ -385,38 +522,25 @@
 
           </div>
 
-          <div
-            class="progress-track"
-            aria-hidden="true"
-          >
+          <div class="vertical-progress">
 
-            <span
+            <div
               id="sidebarProgressBar"
-            ></span>
+            ></div>
 
           </div>
 
-        </div>
+          <span class="progress-stage">
+            PRESET
+            <br>
+            PRACTICE
+          </span>
 
-        <div class="sidebar-note">
+        </aside>
 
-          <strong>
-            Stage 1
-          </strong>
+        <section class="interview-room">
 
-          <p>
-            No AI evaluation is being generated in this version.
-          </p>
-
-        </div>
-
-      </aside>
-
-      <section class="interview-room">
-
-        <div class="question-topbar">
-
-          <div>
+          <div class="question-status">
 
             <span
               class="question-number"
@@ -434,143 +558,167 @@
 
           </div>
 
-          <button
-            class="text-button danger-text"
-            id="endSessionButton"
-            type="button"
-          >
-            End Session
-          </button>
+          <div class="question-block">
 
-        </div>
+            <span class="interviewer-label">
+              INTERVIEWER
+            </span>
 
-        <div class="question-block">
+            <h2 id="questionText">
+              Loading question...
+            </h2>
 
-          <p class="question-label">
-            INTERVIEWER
-          </p>
+          </div>
 
-          <h2 id="questionText">
-            Loading question...
-          </h2>
+          <div class="response-section">
 
-        </div>
+            <div class="response-toolbar">
 
-        <div class="answer-area">
+              <div>
 
-          <div class="answer-heading">
+                <label for="answerInput">
+                  Your response
+                </label>
 
-            <div>
+                <span>
+                  Editable transcript
+                </span>
 
-              <label for="answerInput">
-                Your answer
-              </label>
+              </div>
 
-              <p>
-                Type your response or start the microphone.
-                You can edit the transcript before finishing.
-              </p>
+              <div class="answer-metrics">
+
+                <span>
+                  <strong id="answerTimer">
+                    00:00
+                  </strong>
+                  TIME
+                </span>
+
+                <span>
+                  <strong id="wordCount">
+                    0
+                  </strong>
+                  WORDS
+                </span>
+
+              </div>
 
             </div>
 
-            <div class="answer-metrics">
+            <textarea
+              id="answerInput"
+              rows="10"
+              placeholder="Start answering here..."
+              spellcheck="true"
+            ></textarea>
 
-              <span>
-                <strong id="wordCount">
-                  0
-                </strong>
-                words
-              </span>
+            <p
+              class="answer-error"
+              id="answerError"
+              role="alert"
+            ></p>
 
-              <span>
-                <strong id="answerTimer">
-                  00:00
-                </strong>
-                answering time
-              </span>
+            <div
+              class="speech-panel"
+              id="speechPanel"
+            >
+
+              <div class="speech-indicator">
+
+                <span class="speech-dot"></span>
+
+                <div>
+
+                  <span class="speech-label">
+                    TRANSCRIPTION
+                  </span>
+
+                  <p
+                    id="speechStatus"
+                    aria-live="polite"
+                  >
+                    Microphone ready if supported by your browser.
+                  </p>
+
+                </div>
+
+              </div>
+
+              <div
+                class="listening-bars"
+                aria-hidden="true"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="speech-controls">
+
+                <button
+                  class="secondary-button"
+                  id="startMicButton"
+                  type="button"
+                >
+                  Start Mic
+                </button>
+
+                <button
+                  class="secondary-button"
+                  id="stopMicButton"
+                  type="button"
+                  disabled
+                >
+                  Stop
+                </button>
+
+              </div>
 
             </div>
 
           </div>
 
-          <textarea
-            id="answerInput"
-            rows="10"
-            placeholder="Start your answer here..."
-            spellcheck="true"
-          ></textarea>
+          <div class="interview-actions">
 
-          <p
-            class="answer-error"
-            id="answerError"
-            role="alert"
-          ></p>
+            <div class="keyboard-note">
 
-          <div class="speech-panel">
-
-            <div class="speech-copy">
-
-              <span class="speech-label">
-                LIVE TRANSCRIPTION
+              <span>
+                Your answer remains editable
+                until you finish it.
               </span>
-
-              <p
-                id="speechStatus"
-                aria-live="polite"
-              >
-                Microphone is ready if your browser supports speech recognition.
-              </p>
 
             </div>
 
-            <div class="speech-controls">
+            <div class="action-buttons">
 
               <button
                 class="secondary-button"
-                id="startMicButton"
+                id="finishAnswerButton"
                 type="button"
               >
-                Start Microphone
+                Finish Answer
               </button>
 
               <button
-                class="secondary-button"
-                id="stopMicButton"
+                class="primary-button"
+                id="nextQuestionButton"
                 type="button"
                 disabled
               >
-                Stop
+                Next Question
+                <span>→</span>
               </button>
 
             </div>
 
           </div>
 
-        </div>
+        </section>
 
-        <div class="interview-actions">
-
-          <button
-            class="secondary-button"
-            id="finishAnswerButton"
-            type="button"
-          >
-            Finish Answer
-          </button>
-
-          <button
-            class="primary-button"
-            id="nextQuestionButton"
-            type="button"
-            disabled
-          >
-            Next Question
-            <span>→</span>
-          </button>
-
-        </div>
-
-      </section>
+      </div>
 
     </section>
 
@@ -580,22 +728,33 @@
       aria-labelledby="resultsTitle"
     >
 
-      <div class="results-intro">
+      <div class="results-masthead">
 
-        <p class="eyebrow">
-          Session Review / 03
-        </p>
+        <div>
 
-        <h1 id="resultsTitle">
-          Review what you said.
-        </h1>
+          <p class="eyebrow">
+            03 / SESSION DEBRIEF
+          </p>
 
-        <p>
-          Stage 1 reports practice facts such as
-          answer length, answering time, and approximate
-          filler phrase usage. These are not AI scores
-          and do not predict interview or hiring performance.
-        </p>
+          <h1 id="resultsTitle">
+            Review the
+            <span>conversation.</span>
+          </h1>
+
+        </div>
+
+        <div class="debrief-note">
+
+          <span>
+            IMPORTANT
+          </span>
+
+          <p>
+            These are basic practice checks,
+            not AI evaluation or hiring predictions.
+          </p>
+
+        </div>
 
       </div>
 
@@ -608,14 +767,14 @@
 
       <section class="summary-section">
 
-        <div class="summary-heading">
+        <div class="summary-label">
 
           <span>
             SESSION SUMMARY
           </span>
 
           <small>
-            Basic practice checks
+            MEASURED LOCALLY
           </small>
 
         </div>
@@ -674,8 +833,8 @@
 
         <p class="summary-disclaimer">
           Answering time includes thinking, typing,
-          transcription, and editing. It is not a measurement
-          of speaking time.
+          transcription, and editing. It is not
+          speaking-time measurement.
         </p>
 
       </section>
@@ -684,9 +843,17 @@
 
         <div class="review-heading">
 
-          <span>
-            ANSWER REVIEW
-          </span>
+          <div>
+
+            <span>
+              TRANSCRIPT REVIEW
+            </span>
+
+            <h2>
+              Your answers
+            </h2>
+
+          </div>
 
           <small id="reviewCount">
             0 completed answers
@@ -708,7 +875,7 @@
           id="practiceAgainButton"
           type="button"
         >
-          Practice Again
+          New Session
           <span>→</span>
         </button>
 
@@ -721,13 +888,12 @@
   <footer class="site-footer">
 
     <span>
-      HireLens / Stage 1
+      HIRELENS
     </span>
 
-    <p>
-      Preset interview practice.
-      AI interviewing will be added in Stage 2.
-    </p>
+    <span>
+      INTERVIEW STUDIO / STAGE 01
+    </span>
 
     <span>
       2026
