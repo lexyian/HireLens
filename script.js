@@ -1,20 +1,37 @@
 const roleLabels = {
-  frontend: "Frontend Developer",
-  software: "Software Developer",
-  qa: "QA Engineer",
-  "it-support": "IT Support Specialist"
+  frontend:
+    "Frontend Developer",
+
+  software:
+    "Software Developer",
+
+  qa:
+    "QA Engineer",
+
+  "it-support":
+    "IT Support Specialist"
 };
 
 const interviewTypeLabels = {
-  behavioral: "Behavioral",
-  technical: "Technical",
-  mixed: "Mixed"
+  behavioral:
+    "Behavioral",
+
+  technical:
+    "Technical",
+
+  mixed:
+    "Mixed"
 };
 
 const difficultyLabels = {
-  easy: "Easy",
-  medium: "Medium",
-  hard: "Hard"
+  easy:
+    "Easy",
+
+  medium:
+    "Medium",
+
+  hard:
+    "Hard"
 };
 
 const behavioralQuestions = {
@@ -177,115 +194,214 @@ const fillerPhrases = [
 ];
 
 const setupView =
-  document.getElementById("setupView");
+  document.getElementById(
+    "setupView"
+  );
 
 const interviewView =
-  document.getElementById("interviewView");
+  document.getElementById(
+    "interviewView"
+  );
 
 const resultsView =
-  document.getElementById("resultsView");
+  document.getElementById(
+    "resultsView"
+  );
 
 const setupForm =
-  document.getElementById("setupForm");
+  document.getElementById(
+    "setupForm"
+  );
 
 const jobRole =
-  document.getElementById("jobRole");
+  document.getElementById(
+    "jobRole"
+  );
 
 const interviewType =
-  document.getElementById("interviewType");
+  document.getElementById(
+    "interviewType"
+  );
 
 const difficulty =
-  document.getElementById("difficulty");
+  document.getElementById(
+    "difficulty"
+  );
 
 const questionCount =
-  document.getElementById("questionCount");
+  document.getElementById(
+    "questionCount"
+  );
 
 const setupError =
-  document.getElementById("setupError");
+  document.getElementById(
+    "setupError"
+  );
+
+const previewRole =
+  document.getElementById(
+    "previewRole"
+  );
+
+const previewType =
+  document.getElementById(
+    "previewType"
+  );
+
+const previewDifficulty =
+  document.getElementById(
+    "previewDifficulty"
+  );
+
+const previewCount =
+  document.getElementById(
+    "previewCount"
+  );
 
 const sessionRole =
-  document.getElementById("sessionRole");
+  document.getElementById(
+    "sessionRole"
+  );
 
 const sessionType =
-  document.getElementById("sessionType");
+  document.getElementById(
+    "sessionType"
+  );
 
 const sessionDifficulty =
-  document.getElementById("sessionDifficulty");
+  document.getElementById(
+    "sessionDifficulty"
+  );
 
 const sessionQuestionTotal =
-  document.getElementById("sessionQuestionTotal");
+  document.getElementById(
+    "sessionQuestionTotal"
+  );
 
 const sidebarProgressText =
-  document.getElementById("sidebarProgressText");
+  document.getElementById(
+    "sidebarProgressText"
+  );
 
 const sidebarProgressBar =
-  document.getElementById("sidebarProgressBar");
+  document.getElementById(
+    "sidebarProgressBar"
+  );
 
 const questionNumber =
-  document.getElementById("questionNumber");
+  document.getElementById(
+    "questionNumber"
+  );
 
 const questionCategory =
-  document.getElementById("questionCategory");
+  document.getElementById(
+    "questionCategory"
+  );
 
 const questionText =
-  document.getElementById("questionText");
+  document.getElementById(
+    "questionText"
+  );
 
 const answerInput =
-  document.getElementById("answerInput");
+  document.getElementById(
+    "answerInput"
+  );
 
 const wordCount =
-  document.getElementById("wordCount");
+  document.getElementById(
+    "wordCount"
+  );
 
 const answerTimer =
-  document.getElementById("answerTimer");
+  document.getElementById(
+    "answerTimer"
+  );
 
 const answerError =
-  document.getElementById("answerError");
+  document.getElementById(
+    "answerError"
+  );
 
 const speechStatus =
-  document.getElementById("speechStatus");
+  document.getElementById(
+    "speechStatus"
+  );
+
+const speechPanel =
+  document.getElementById(
+    "speechPanel"
+  );
 
 const startMicButton =
-  document.getElementById("startMicButton");
+  document.getElementById(
+    "startMicButton"
+  );
 
 const stopMicButton =
-  document.getElementById("stopMicButton");
+  document.getElementById(
+    "stopMicButton"
+  );
 
 const finishAnswerButton =
-  document.getElementById("finishAnswerButton");
+  document.getElementById(
+    "finishAnswerButton"
+  );
 
 const nextQuestionButton =
-  document.getElementById("nextQuestionButton");
+  document.getElementById(
+    "nextQuestionButton"
+  );
 
 const endSessionButton =
-  document.getElementById("endSessionButton");
+  document.getElementById(
+    "endSessionButton"
+  );
 
 const resultCompleted =
-  document.getElementById("resultCompleted");
+  document.getElementById(
+    "resultCompleted"
+  );
 
 const resultWords =
-  document.getElementById("resultWords");
+  document.getElementById(
+    "resultWords"
+  );
 
 const resultTime =
-  document.getElementById("resultTime");
+  document.getElementById(
+    "resultTime"
+  );
 
 const resultFillers =
-  document.getElementById("resultFillers");
+  document.getElementById(
+    "resultFillers"
+  );
 
 const resultsSessionLine =
-  document.getElementById("resultsSessionLine");
+  document.getElementById(
+    "resultsSessionLine"
+  );
 
 const reviewCount =
-  document.getElementById("reviewCount");
+  document.getElementById(
+    "reviewCount"
+  );
 
 const reviewList =
-  document.getElementById("reviewList");
+  document.getElementById(
+    "reviewList"
+  );
 
 const practiceAgainButton =
-  document.getElementById("practiceAgainButton");
+  document.getElementById(
+    "practiceAgainButton"
+  );
 
 const brandLink =
-  document.getElementById("brandLink");
+  document.getElementById(
+    "brandLink"
+  );
 
 let session = null;
 
@@ -301,13 +417,50 @@ let speechBaseText = "";
 
 let speechFinalText = "";
 
-let speechEndedWithError = false;
+let speechEndedWithError =
+  false;
+
+function updateSetupPreview() {
+  previewRole.textContent =
+    roleLabels[
+      jobRole.value
+    ];
+
+  previewType.textContent =
+    interviewTypeLabels[
+      interviewType.value
+    ];
+
+  previewDifficulty
+    .textContent =
+      difficultyLabels[
+        difficulty.value
+      ];
+
+  previewCount.textContent =
+    `${questionCount.value} Questions`;
+}
+
+[
+  jobRole,
+  interviewType,
+  difficulty,
+  questionCount
+].forEach(
+  (control) => {
+    control.addEventListener(
+      "change",
+      updateSetupPreview
+    );
+  }
+);
 
 function shuffle(items) {
   const copy = [...items];
 
   for (
-    let index = copy.length - 1;
+    let index =
+      copy.length - 1;
     index > 0;
     index -= 1
   ) {
@@ -330,35 +483,27 @@ function shuffle(items) {
 }
 
 function escapeHtml(value) {
-  return String(value ?? "")
-    .replace(
-      /[&<>"']/g,
-      (character) =>
-        ({
-          "&": "&amp;",
-          "<": "&lt;",
-          ">": "&gt;",
-          '"': "&quot;",
-          "'": "&#039;"
-        })[character]
-    );
-}
-
-function titleCase(value) {
-  if (!value) {
-    return "";
-  }
-
-  return String(value)
-    .charAt(0)
-    .toUpperCase() +
-    String(value).slice(1);
+  return String(
+    value ?? ""
+  ).replace(
+    /[&<>"']/g,
+    (character) =>
+      ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      })[character]
+  );
 }
 
 function countWords(text) {
   const cleaned =
-    String(text || "")
-      .trim();
+    String(
+      text ||
+      ""
+    ).trim();
 
   if (!cleaned) {
     return 0;
@@ -370,16 +515,20 @@ function countWords(text) {
     .length;
 }
 
-function countFillerPhrases(text) {
+function countFillerPhrases(
+  text
+) {
   const normalized =
-    String(text || "")
-      .toLowerCase();
+    String(
+      text ||
+      ""
+    ).toLowerCase();
 
   let total = 0;
 
   fillerPhrases.forEach(
     (phrase) => {
-      const escapedPhrase =
+      const escaped =
         phrase.replace(
           /[.*+?^${}()|[\]\\]/g,
           "\\$&"
@@ -387,15 +536,18 @@ function countFillerPhrases(text) {
 
       const pattern =
         new RegExp(
-          `\\b${escapedPhrase}\\b`,
+          `\\b${escaped}\\b`,
           "gi"
         );
 
       const matches =
-        normalized.match(pattern);
+        normalized.match(
+          pattern
+        );
 
       total +=
-        matches?.length || 0;
+        matches?.length ||
+        0;
     }
   );
 
@@ -409,22 +561,31 @@ function formatTime(
     Math.max(
       0,
       Math.floor(
-        Number(totalSeconds) || 0
+        Number(
+          totalSeconds
+        ) ||
+        0
       )
     );
 
   const minutes =
     Math.floor(
-      safeSeconds / 60
+      safeSeconds /
+      60
     );
 
   const seconds =
-    safeSeconds % 60;
+    safeSeconds %
+    60;
 
-  return `${String(minutes).padStart(
+  return `${String(
+    minutes
+  ).padStart(
     2,
     "0"
-  )}:${String(seconds).padStart(
+  )}:${String(
+    seconds
+  ).padStart(
     2,
     "0"
   )}`;
@@ -444,7 +605,8 @@ function createQuestion(
 
     text,
     category,
-    difficulty: level,
+    difficulty:
+      level,
     role
   };
 }
@@ -456,18 +618,20 @@ function pickByDifficulty(
   category,
   role
 ) {
-  const primary =
+  const selected =
     shuffle(
-      bank[selectedDifficulty]
+      bank[
+        selectedDifficulty
+      ]
     );
 
-  const chosen =
-    primary
+  const output =
+    selected
       .slice(
         0,
         Math.min(
           amount,
-          primary.length
+          selected.length
         )
       )
       .map(
@@ -482,36 +646,26 @@ function pickByDifficulty(
 
   let remaining =
     amount -
-    chosen.length;
+    output.length;
 
-  if (remaining <= 0) {
-    return chosen;
+  if (
+    remaining <= 0
+  ) {
+    return output;
   }
 
   let fallbackLevels = [];
 
   if (
     selectedDifficulty ===
-    "easy"
+      "easy" ||
+    selectedDifficulty ===
+      "hard"
   ) {
     fallbackLevels = [
       "medium"
     ];
-  }
-
-  if (
-    selectedDifficulty ===
-    "hard"
-  ) {
-    fallbackLevels = [
-      "medium"
-    ];
-  }
-
-  if (
-    selectedDifficulty ===
-    "medium"
-  ) {
+  } else {
     fallbackLevels = [
       "hard",
       "easy"
@@ -519,38 +673,38 @@ function pickByDifficulty(
   }
 
   for (
-    const fallbackLevel
+    const level
     of fallbackLevels
   ) {
-    if (remaining <= 0) {
+    if (
+      remaining <= 0
+    ) {
       break;
     }
 
     const candidates =
       shuffle(
-        bank[fallbackLevel]
+        bank[level]
       );
 
     const take =
       Math.min(
         remaining,
-        selectedDifficulty ===
-          "medium"
-          ? Math.ceil(
-              remaining / 2
-            )
-          : remaining
+        candidates.length
       );
 
-    chosen.push(
+    output.push(
       ...candidates
-        .slice(0, take)
+        .slice(
+          0,
+          take
+        )
         .map(
           (text) =>
             createQuestion(
               text,
               category,
-              fallbackLevel,
+              level,
               role
             )
         )
@@ -558,10 +712,10 @@ function pickByDifficulty(
 
     remaining =
       amount -
-      chosen.length;
+      output.length;
   }
 
-  return chosen;
+  return output;
 }
 
 function interleaveQuestions(
@@ -570,7 +724,7 @@ function interleaveQuestions(
 ) {
   const output = [];
 
-  const longest =
+  const length =
     Math.max(
       first.length,
       second.length
@@ -578,16 +732,20 @@ function interleaveQuestions(
 
   for (
     let index = 0;
-    index < longest;
+    index < length;
     index += 1
   ) {
-    if (first[index]) {
+    if (
+      first[index]
+    ) {
       output.push(
         first[index]
       );
     }
 
-    if (second[index]) {
+    if (
+      second[index]
+    ) {
       output.push(
         second[index]
       );
@@ -600,9 +758,6 @@ function interleaveQuestions(
 function buildQuestionSet(
   config
 ) {
-  const total =
-    config.questionCount;
-
   if (
     config.interviewType ===
     "behavioral"
@@ -610,7 +765,7 @@ function buildQuestionSet(
     return pickByDifficulty(
       behavioralQuestions,
       config.difficulty,
-      total,
+      config.questionCount,
       "behavioral",
       config.role
     );
@@ -625,7 +780,7 @@ function buildQuestionSet(
         config.role
       ],
       config.difficulty,
-      total,
+      config.questionCount,
       "technical",
       config.role
     );
@@ -633,11 +788,12 @@ function buildQuestionSet(
 
   const technicalCount =
     Math.ceil(
-      total / 2
+      config.questionCount /
+      2
     );
 
   const behavioralCount =
-    total -
+    config.questionCount -
     technicalCount;
 
   const technical =
@@ -665,47 +821,53 @@ function buildQuestionSet(
     behavioral
   ).slice(
     0,
-    total
+    config.questionCount
   );
 }
 
-function showView(
-  viewName
-) {
-  setupView.classList.add(
-    "hidden"
-  );
+function showView(name) {
+  setupView
+    .classList
+    .add("hidden");
 
-  interviewView.classList.add(
-    "hidden"
-  );
+  interviewView
+    .classList
+    .add("hidden");
 
-  resultsView.classList.add(
-    "hidden"
-  );
+  resultsView
+    .classList
+    .add("hidden");
 
   if (
-    viewName === "setup"
+    name === "setup"
   ) {
-    setupView.classList.remove(
-      "hidden"
-    );
+    setupView
+      .classList
+      .remove(
+        "hidden"
+      );
   }
 
   if (
-    viewName === "interview"
+    name ===
+    "interview"
   ) {
-    interviewView.classList.remove(
-      "hidden"
-    );
+    interviewView
+      .classList
+      .remove(
+        "hidden"
+      );
   }
 
   if (
-    viewName === "results"
+    name ===
+    "results"
   ) {
-    resultsView.classList.remove(
-      "hidden"
-    );
+    resultsView
+      .classList
+      .remove(
+        "hidden"
+      );
   }
 
   window.scrollTo({
@@ -715,19 +877,18 @@ function showView(
 }
 
 function currentQuestion() {
-  if (!session) {
-    return null;
-  }
-
-  return session.questions[
-    session.currentIndex
-  ];
+  return session
+    ?.questions[
+      session.currentIndex
+    ] ||
+    null;
 }
 
 function elapsedQuestionSeconds() {
   if (
     !session ||
-    !session.questionStartedAt
+    !session
+      .questionStartedAt
   ) {
     return 0;
   }
@@ -735,26 +896,31 @@ function elapsedQuestionSeconds() {
   return Math.floor(
     (
       Date.now() -
-      session.questionStartedAt
+      session
+        .questionStartedAt
     ) /
     1000
   );
 }
 
 function stopTimer() {
-  if (timerInterval) {
+  if (
+    timerInterval
+  ) {
     clearInterval(
       timerInterval
     );
 
-    timerInterval = null;
+    timerInterval =
+      null;
   }
 }
 
 function updateTimerDisplay() {
   if (
     !session ||
-    session.currentFinished
+    session
+      .currentFinished
   ) {
     return;
   }
@@ -784,21 +950,46 @@ function updateWordCount() {
     );
 }
 
-function updateSessionSidebar() {
+function updateProgress() {
   const current =
-    session.currentIndex + 1;
+    session.currentIndex +
+    1;
 
   const total =
-    session.questions.length;
+    session.questions
+      .length;
 
-  sidebarProgressText.textContent =
-    `${current} / ${total}`;
+  sidebarProgressText
+    .textContent =
+      `${current} / ${total}`;
 
-  sidebarProgressBar.style.width =
-    `${(
+  const percent =
+    (
       current /
       total
-    ) * 100}%`;
+    ) *
+    100;
+
+  if (
+    window.innerWidth <=
+    760
+  ) {
+    sidebarProgressBar
+      .style.width =
+        `${percent}%`;
+
+    sidebarProgressBar
+      .style.height =
+        "100%";
+  } else {
+    sidebarProgressBar
+      .style.height =
+        `${percent}%`;
+
+    sidebarProgressBar
+      .style.width =
+        "100%";
+  }
 
   sessionRole.textContent =
     roleLabels[
@@ -811,38 +1002,56 @@ function updateSessionSidebar() {
         .interviewType
     ];
 
-  sessionDifficulty.textContent =
-    difficultyLabels[
-      session.config.difficulty
-    ];
+  sessionDifficulty
+    .textContent =
+      difficultyLabels[
+        session.config
+          .difficulty
+      ];
 
-  sessionQuestionTotal.textContent =
-    total;
+  sessionQuestionTotal
+    .textContent =
+      total;
 }
 
 function resetSpeechControls() {
-  if (!speechSupported) {
-    startMicButton.disabled =
-      true;
+  speechPanel
+    .classList
+    .remove(
+      "listening"
+    );
 
-    stopMicButton.disabled =
-      true;
+  if (
+    !speechSupported
+  ) {
+    startMicButton
+      .disabled =
+        true;
 
-    speechStatus.textContent =
-      "Speech recognition is not available in this browser. You can still type your answer.";
+    stopMicButton
+      .disabled =
+        true;
+
+    speechStatus
+      .textContent =
+        "Speech recognition is unavailable in this browser. Typing still works.";
 
     return;
   }
 
-  startMicButton.disabled =
-    session?.currentFinished ||
-    false;
+  startMicButton
+    .disabled =
+      session
+        ?.currentFinished ||
+      false;
 
-  stopMicButton.disabled =
-    true;
+  stopMicButton
+    .disabled =
+      true;
 
-  speechStatus.textContent =
-    "Microphone is ready. Your transcript will remain editable after transcription stops.";
+  speechStatus
+    .textContent =
+      "Microphone ready. The transcript remains editable after you stop.";
 }
 
 function renderQuestion() {
@@ -851,6 +1060,7 @@ function renderQuestion() {
 
   if (!question) {
     showResults();
+
     return;
   }
 
@@ -877,10 +1087,12 @@ function renderQuestion() {
     "00:00";
 
   const current =
-    session.currentIndex + 1;
+    session.currentIndex +
+    1;
 
   const total =
-    session.questions.length;
+    session.questions
+      .length;
 
   questionNumber.textContent =
     `QUESTION ${String(
@@ -895,24 +1107,28 @@ function renderQuestion() {
       "0"
     )}`;
 
-  questionCategory.textContent =
-    `${question.category.toUpperCase()} · ${question.difficulty.toUpperCase()}`;
+  questionCategory
+    .textContent =
+      `${question.category.toUpperCase()} · ${question.difficulty.toUpperCase()}`;
 
   questionText.textContent =
     question.text;
 
-  finishAnswerButton.disabled =
-    false;
+  finishAnswerButton
+    .disabled =
+      false;
 
-  nextQuestionButton.disabled =
-    true;
+  nextQuestionButton
+    .disabled =
+      true;
 
-  nextQuestionButton.innerHTML =
-    current === total
-      ? `View Results <span>→</span>`
-      : `Next Question <span>→</span>`;
+  nextQuestionButton
+    .innerHTML =
+      current === total
+        ? `View Debrief <span>→</span>`
+        : `Next Question <span>→</span>`;
 
-  updateSessionSidebar();
+  updateProgress();
 
   resetSpeechControls();
 
@@ -946,7 +1162,8 @@ function startInterview(
 
     questionCount:
       Number(
-        questionCount.value
+        questionCount
+          .value
       )
   };
 
@@ -960,7 +1177,7 @@ function startInterview(
     config.questionCount
   ) {
     setupError.textContent =
-      "HireLens could not prepare this session. Please try another setup.";
+      "HireLens could not build this session. Try another configuration.";
 
     return;
   }
@@ -970,14 +1187,18 @@ function startInterview(
     questions,
     answers: [],
     currentIndex: 0,
-    currentFinished: false,
+    currentFinished:
+      false,
     active: true,
-    startedAt: Date.now(),
+    startedAt:
+      Date.now(),
     questionStartedAt:
       Date.now()
   };
 
-  showView("interview");
+  showView(
+    "interview"
+  );
 
   renderQuestion();
 }
@@ -985,7 +1206,8 @@ function startInterview(
 function finishCurrentAnswer() {
   if (
     !session ||
-    session.currentFinished
+    session
+      .currentFinished
   ) {
     return;
   }
@@ -995,16 +1217,18 @@ function finishCurrentAnswer() {
       .trim();
 
   if (!text) {
-    answerError.textContent =
-      "Write or transcribe an answer before finishing this question.";
+    answerError
+      .textContent =
+        "Enter an answer before finishing this question.";
 
     answerInput.focus();
 
     return;
   }
 
-  answerError.textContent =
-    "";
+  answerError
+    .textContent =
+      "";
 
   if (isListening) {
     stopListening();
@@ -1016,7 +1240,7 @@ function finishCurrentAnswer() {
   const durationSeconds =
     elapsedQuestionSeconds();
 
-  const answer = {
+  session.answers.push({
     questionId:
       question.id,
 
@@ -1032,7 +1256,9 @@ function finishCurrentAnswer() {
     text,
 
     wordCount:
-      countWords(text),
+      countWords(
+        text
+      ),
 
     fillerCount:
       countFillerPhrases(
@@ -1040,11 +1266,7 @@ function finishCurrentAnswer() {
       ),
 
     durationSeconds
-  };
-
-  session.answers.push(
-    answer
-  );
+  });
 
   session.currentFinished =
     true;
@@ -1059,41 +1281,55 @@ function finishCurrentAnswer() {
   answerInput.readOnly =
     true;
 
-  startMicButton.disabled =
-    true;
+  speechPanel
+    .classList
+    .remove(
+      "listening"
+    );
 
-  stopMicButton.disabled =
-    true;
+  startMicButton
+    .disabled =
+      true;
 
-  finishAnswerButton.disabled =
-    true;
+  stopMicButton
+    .disabled =
+      true;
 
-  nextQuestionButton.disabled =
-    false;
+  finishAnswerButton
+    .disabled =
+      true;
+
+  nextQuestionButton
+    .disabled =
+      false;
 
   speechStatus.textContent =
-    "Answer saved. Continue when you are ready.";
+    "Answer saved. Continue whenever you are ready.";
 }
 
 function nextQuestion() {
   if (
     !session ||
-    !session.currentFinished
+    !session
+      .currentFinished
   ) {
     return;
   }
 
   const isLast =
     session.currentIndex >=
-    session.questions.length -
+    session.questions
+      .length -
       1;
 
   if (isLast) {
     showResults();
+
     return;
   }
 
-  session.currentIndex += 1;
+  session.currentIndex +=
+    1;
 
   renderQuestion();
 }
@@ -1110,21 +1346,18 @@ function endSession() {
     answerInput.value
       .trim();
 
-  let message =
-    "End this interview now? Remaining questions will be skipped.";
+  const message =
+    !session
+      .currentFinished &&
+    draft
+      ? "End the interview? Your unfinished current response will not be included."
+      : "End this interview? Remaining questions will be skipped.";
 
   if (
-    !session.currentFinished &&
-    draft
+    !window.confirm(
+      message
+    )
   ) {
-    message =
-      "End this interview now? Your current unfinished draft will not be counted in the results.";
-  }
-
-  const confirmed =
-    window.confirm(message);
-
-  if (!confirmed) {
     return;
   }
 
@@ -1139,7 +1372,8 @@ function totalAnswerTime() {
         answer
       ) =>
         total +
-        answer.durationSeconds,
+        answer
+          .durationSeconds,
       0
     );
 }
@@ -1165,7 +1399,8 @@ function totalFillers() {
         answer
       ) =>
         total +
-        answer.fillerCount,
+        answer
+          .fillerCount,
       0
     );
 }
@@ -1180,18 +1415,18 @@ function practiceChecks(
     25
   ) {
     checks.push(
-      "This was a short response. For questions that ask for an example or explanation, you may want to practice adding more concrete detail."
+      "This response is fairly short. For an explanation or example question, try adding more concrete detail."
     );
   } else if (
     answer.wordCount >
     220
   ) {
     checks.push(
-      "This was a long response. On another practice attempt, check whether any points can be made more directly."
+      "This is a longer response. Try another attempt and see whether any points can be stated more directly."
     );
   } else {
     checks.push(
-      "The response length falls within a moderate practice range. This is only a length check, not a quality score."
+      "The response falls within a moderate practice length. This is a length observation, not a quality score."
     );
   }
 
@@ -1200,25 +1435,18 @@ function practiceChecks(
     0
   ) {
     checks.push(
-      "No selected filler phrases were detected in the transcript or typed answer."
-    );
-  } else if (
-    answer.fillerCount <=
-    2
-  ) {
-    checks.push(
-      `${answer.fillerCount} selected filler phrase${answer.fillerCount === 1 ? "" : "s"} detected. This count is approximate.`
+      "No selected filler phrases were found in the transcript."
     );
   } else {
     checks.push(
-      `${answer.fillerCount} selected filler phrases were detected. You can review where they appeared and practice replacing some of them with a pause.`
+      `${answer.fillerCount} selected filler phrase${answer.fillerCount === 1 ? "" : "s"} detected. This is only an approximate text-based count.`
     );
   }
 
   checks.push(
     `You spent ${formatTime(
       answer.durationSeconds
-    )} on this response. This includes thinking, typing, transcription, and editing.`
+    )} on this response, including thinking, typing, transcription, and editing.`
   );
 
   return checks;
@@ -1229,148 +1457,153 @@ function renderReviewItems() {
     "";
 
   if (
-    session.answers.length ===
-    0
+    !session.answers
+      .length
   ) {
     reviewList.innerHTML = `
       <p class="summary-disclaimer">
-        No answers were completed before the session ended.
+        No completed answers were saved before the session ended.
       </p>
     `;
 
     return;
   }
 
-  session.answers.forEach(
-    (
-      answer,
-      index
-    ) => {
-      const item =
-        document.createElement(
-          "details"
-        );
+  session.answers
+    .forEach(
+      (
+        answer,
+        index
+      ) => {
+        const item =
+          document.createElement(
+            "details"
+          );
 
-      item.className =
-        "review-item";
+        item.className =
+          "review-item";
 
-      const checks =
-        practiceChecks(
-          answer
-        );
+        const checks =
+          practiceChecks(
+            answer
+          );
 
-      item.innerHTML = `
-        <summary>
+        item.innerHTML = `
+          <summary>
 
-          <span class="review-index">
-            ${String(
-              index + 1
-            ).padStart(
-              2,
-              "0"
-            )}
-          </span>
-
-          <span class="review-question">
-
-            <strong>
-              ${escapeHtml(
-                answer.question
-              )}
-            </strong>
-
-            <span>
-              ${escapeHtml(
-                answer.category.toUpperCase()
-              )}
-              ·
-              ${escapeHtml(
-                answer.difficulty.toUpperCase()
+            <span class="review-index">
+              ${String(
+                index + 1
+              ).padStart(
+                2,
+                "0"
               )}
             </span>
 
-          </span>
+            <span class="review-question">
 
-          <span class="review-toggle">
-            REVIEW +
-          </span>
+              <strong>
+                ${escapeHtml(
+                  answer.question
+                )}
+              </strong>
 
-        </summary>
+              <span>
+                ${escapeHtml(
+                  answer.category
+                    .toUpperCase()
+                )}
+                ·
+                ${escapeHtml(
+                  answer.difficulty
+                    .toUpperCase()
+                )}
+              </span>
 
-        <div class="review-body">
-
-          <span class="review-answer-label">
-            YOUR ANSWER
-          </span>
-
-          <p class="review-answer">${escapeHtml(
-            answer.text
-          )}</p>
-
-          <div class="review-metrics">
-
-            <span>
-              ${answer.wordCount} words
             </span>
 
-            <span>
-              ${formatTime(
-                answer.durationSeconds
-              )} answering time
+            <span class="review-toggle">
+              OPEN +
             </span>
 
-            <span>
-              ${answer.fillerCount} approx. fillers
+          </summary>
+
+          <div class="review-body">
+
+            <span class="review-answer-label">
+              YOUR RESPONSE
             </span>
+
+            <p class="review-answer">${escapeHtml(
+              answer.text
+            )}</p>
+
+            <div class="review-metrics">
+
+              <span>
+                ${answer.wordCount} WORDS
+              </span>
+
+              <span>
+                ${formatTime(
+                  answer.durationSeconds
+                )} ANSWERING TIME
+              </span>
+
+              <span>
+                ${answer.fillerCount} APPROX. FILLERS
+              </span>
+
+            </div>
+
+            <div class="practice-checks">
+
+              <span class="check-label">
+                BASIC PRACTICE CHECKS · NOT AI FEEDBACK
+              </span>
+
+              <ul>
+
+                ${checks
+                  .map(
+                    (check) =>
+                      `<li>${escapeHtml(
+                        check
+                      )}</li>`
+                  )
+                  .join("")}
+
+              </ul>
+
+            </div>
 
           </div>
+        `;
 
-          <div class="practice-checks">
+        item.addEventListener(
+          "toggle",
+          () => {
+            const toggle =
+              item.querySelector(
+                ".review-toggle"
+              );
 
-            <span class="check-label">
-              BASIC PRACTICE CHECKS · NOT AI FEEDBACK
-            </span>
-
-            <ul>
-
-              ${checks
-                .map(
-                  (check) =>
-                    `<li>${escapeHtml(
-                      check
-                    )}</li>`
-                )
-                .join("")}
-
-            </ul>
-
-          </div>
-
-        </div>
-      `;
-
-      item.addEventListener(
-        "toggle",
-        () => {
-          const toggle =
-            item.querySelector(
-              ".review-toggle"
-            );
-
-          if (toggle) {
-            toggle.textContent =
-              item.open
-                ? "CLOSE −"
-                : "REVIEW +";
+            if (toggle) {
+              toggle
+                .textContent =
+                  item.open
+                    ? "CLOSE −"
+                    : "OPEN +";
+            }
           }
-        }
-      );
+        );
 
-      reviewList.appendChild(
-        item
-      );
-    }
-  );
+        reviewList
+          .appendChild(
+            item
+          );
+      }
+    );
 }
 
 function showResults() {
@@ -1385,49 +1618,59 @@ function showResults() {
   session.active =
     false;
 
-  showView("results");
-
-  const total =
-    session.questions.length;
+  showView(
+    "results"
+  );
 
   const completed =
-    session.answers.length;
+    session.answers
+      .length;
 
-  resultCompleted.textContent =
-    `${completed} / ${total}`;
+  const total =
+    session.questions
+      .length;
 
-  resultWords.textContent =
-    totalWords();
+  resultCompleted
+    .textContent =
+      `${completed} / ${total}`;
 
-  resultTime.textContent =
-    formatTime(
-      totalAnswerTime()
-    );
+  resultWords
+    .textContent =
+      totalWords();
 
-  resultFillers.textContent =
-    totalFillers();
+  resultTime
+    .textContent =
+      formatTime(
+        totalAnswerTime()
+      );
 
-  resultsSessionLine.textContent =
-    `${roleLabels[
-      session.config.role
-    ]} · ${
-      interviewTypeLabels[
-        session.config
-          .interviewType
-      ]
-    } · ${
-      difficultyLabels[
-        session.config
-          .difficulty
-      ]
-    }`;
+  resultFillers
+    .textContent =
+      totalFillers();
 
-  reviewCount.textContent =
-    `${completed} completed ${
-      completed === 1
-        ? "answer"
-        : "answers"
-    }`;
+  resultsSessionLine
+    .textContent =
+      `${roleLabels[
+        session.config.role
+      ]} · ${
+        interviewTypeLabels[
+          session.config
+            .interviewType
+        ]
+      } · ${
+        difficultyLabels[
+          session.config
+            .difficulty
+        ]
+      }`;
+
+  reviewCount
+    .textContent =
+      `${completed} completed ${
+        completed === 1
+          ? "answer"
+          : "answers"
+      }`;
 
   renderReviewItems();
 }
@@ -1439,9 +1682,14 @@ function practiceAgain() {
 
   session = null;
 
-  answerInput.value = "";
+  answerInput.value =
+    "";
 
-  showView("setup");
+  showView(
+    "setup"
+  );
+
+  updateSetupPreview();
 
   setTimeout(
     () => {
@@ -1453,8 +1701,10 @@ function practiceAgain() {
 
 function initializeSpeechRecognition() {
   const Recognition =
-    window.SpeechRecognition ||
-    window.webkitSpeechRecognition;
+    window
+      .SpeechRecognition ||
+    window
+      .webkitSpeechRecognition;
 
   if (!Recognition) {
     speechSupported =
@@ -1477,11 +1727,13 @@ function initializeSpeechRecognition() {
   recognition.continuous =
     true;
 
-  recognition.interimResults =
-    true;
+  recognition
+    .interimResults =
+      true;
 
-  recognition.maxAlternatives =
-    1;
+  recognition
+    .maxAlternatives =
+      1;
 
   recognition.onstart =
     () => {
@@ -1491,28 +1743,39 @@ function initializeSpeechRecognition() {
       speechEndedWithError =
         false;
 
-      answerInput.readOnly =
-        true;
+      speechPanel
+        .classList
+        .add(
+          "listening"
+        );
 
-      startMicButton.disabled =
-        true;
+      answerInput
+        .readOnly =
+          true;
 
-      stopMicButton.disabled =
-        false;
+      startMicButton
+        .disabled =
+          true;
 
-      speechStatus.textContent =
-        "Listening... Speak normally. Stop the microphone when you want to edit the transcript.";
+      stopMicButton
+        .disabled =
+          false;
+
+      speechStatus
+        .textContent =
+          "Listening. Speak normally, then stop the microphone to edit the transcript.";
     };
 
   recognition.onresult =
     (event) => {
-      let interimText = "";
+      let interim = "";
 
       for (
         let index =
           event.resultIndex;
         index <
-        event.results.length;
+        event.results
+          .length;
         index += 1
       ) {
         const transcript =
@@ -1530,19 +1793,20 @@ function initializeSpeechRecognition() {
           speechFinalText +=
             `${transcript} `;
         } else {
-          interimText +=
+          interim +=
             `${transcript} `;
         }
       }
 
-      const pieces = [
-        speechBaseText,
-        speechFinalText.trim(),
-        interimText.trim()
-      ].filter(Boolean);
-
       answerInput.value =
-        pieces.join(" ");
+        [
+          speechBaseText,
+          speechFinalText
+            .trim(),
+          interim.trim()
+        ]
+          .filter(Boolean)
+          .join(" ");
 
       updateWordCount();
     };
@@ -1552,47 +1816,58 @@ function initializeSpeechRecognition() {
       speechEndedWithError =
         true;
 
+      speechPanel
+        .classList
+        .remove(
+          "listening"
+        );
+
       const messages = {
         "not-allowed":
-          "Microphone permission was denied. You can continue by typing your answer.",
+          "Microphone permission was denied. Continue by typing.",
 
         "service-not-allowed":
-          "Speech recognition permission is unavailable. You can continue by typing your answer.",
+          "Speech recognition permission is unavailable. Continue by typing.",
 
         "audio-capture":
-          "HireLens could not detect a microphone. Check your device and browser microphone settings.",
+          "No microphone could be detected. Check your browser and device settings.",
 
         "no-speech":
           "No speech was detected. Your existing answer was preserved.",
 
         network:
-          "The browser speech service had a network problem. Your existing answer was preserved.",
+          "The browser speech service encountered a network problem. Your answer was preserved.",
 
         aborted:
           "Microphone transcription stopped.",
 
         language:
-          "The browser could not use the selected speech language."
+          "The selected speech language could not be used."
       };
 
-      speechStatus.textContent =
-        messages[
-          event.error
-        ] ||
-        `Speech recognition stopped because of a browser service error (${event.error}). Your answer was preserved.`;
+      speechStatus
+        .textContent =
+          messages[
+            event.error
+          ] ||
+          `Speech recognition stopped (${event.error}). Your answer was preserved.`;
 
-      answerInput.readOnly =
-        false;
+      answerInput
+        .readOnly =
+          false;
 
       isListening =
         false;
 
-      startMicButton.disabled =
-        !speechSupported ||
-        session?.currentFinished;
+      startMicButton
+        .disabled =
+          !speechSupported ||
+          session
+            ?.currentFinished;
 
-      stopMicButton.disabled =
-        true;
+      stopMicButton
+        .disabled =
+          true;
     };
 
   recognition.onend =
@@ -1600,24 +1875,37 @@ function initializeSpeechRecognition() {
       isListening =
         false;
 
-      answerInput.readOnly =
-        session?.currentFinished ||
-        false;
+      speechPanel
+        .classList
+        .remove(
+          "listening"
+        );
 
-      startMicButton.disabled =
-        !speechSupported ||
-        session?.currentFinished;
+      answerInput
+        .readOnly =
+          session
+            ?.currentFinished ||
+          false;
 
-      stopMicButton.disabled =
-        true;
+      startMicButton
+        .disabled =
+          !speechSupported ||
+          session
+            ?.currentFinished;
+
+      stopMicButton
+        .disabled =
+          true;
 
       if (
         !speechEndedWithError &&
         session &&
-        !session.currentFinished
+        !session
+          .currentFinished
       ) {
-        speechStatus.textContent =
-          "Microphone stopped. Your transcript is preserved and can now be edited.";
+        speechStatus
+          .textContent =
+            "Microphone stopped. Your transcript is preserved and editable.";
       }
     };
 
@@ -1629,13 +1917,15 @@ function startListening() {
     !speechSupported ||
     !recognition ||
     isListening ||
-    session?.currentFinished
+    session
+      ?.currentFinished
   ) {
     return;
   }
 
-  answerError.textContent =
-    "";
+  answerError
+    .textContent =
+      "";
 
   speechBaseText =
     answerInput.value
@@ -1650,13 +1940,17 @@ function startListening() {
   try {
     recognition.start();
   } catch (error) {
-    console.error(error);
+    console.error(
+      error
+    );
 
-    speechStatus.textContent =
-      "The microphone could not start. You can continue typing your answer.";
+    speechStatus
+      .textContent =
+        "The microphone could not start. Continue by typing.";
 
-    answerInput.readOnly =
-      false;
+    answerInput
+      .readOnly =
+        false;
   }
 }
 
@@ -1671,7 +1965,9 @@ function stopListening() {
   try {
     recognition.stop();
   } catch (error) {
-    console.error(error);
+    console.error(
+      error
+    );
   }
 }
 
@@ -1683,12 +1979,20 @@ function stopRecognitionForTransition() {
     try {
       recognition.abort();
     } catch (error) {
-      console.error(error);
+      console.error(
+        error
+      );
     }
   }
 
   isListening =
     false;
+
+  speechPanel
+    ?.classList
+    .remove(
+      "listening"
+    );
 
   speechBaseText =
     "";
@@ -1696,8 +2000,9 @@ function stopRecognitionForTransition() {
   speechFinalText =
     "";
 
-  answerInput.readOnly =
-    false;
+  answerInput
+    .readOnly =
+      false;
 }
 
 function hasUnfinishedWork() {
@@ -1712,7 +2017,8 @@ function hasUnfinishedWork() {
     session.answers.length >
       0 ||
     answerInput.value
-      .trim().length >
+      .trim()
+      .length >
       0
   );
 }
@@ -1800,6 +2106,20 @@ window.addEventListener(
       "";
   }
 );
+
+window.addEventListener(
+  "resize",
+  () => {
+    if (
+      session &&
+      session.active
+    ) {
+      updateProgress();
+    }
+  }
+);
+
+updateSetupPreview();
 
 initializeSpeechRecognition();
 
