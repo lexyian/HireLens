@@ -10,7 +10,7 @@
 
   <meta
     name="description"
-    content="HireLens is an interview practice studio for students, fresh graduates, and job seekers."
+    content="HireLens is an interview practice studio for students, fresh graduates, and job seekers across different careers."
   >
 
   <meta
@@ -115,9 +115,9 @@
           </h1>
 
           <p class="setup-description">
-            Build a structured practice interview,
-            answer by typing or speaking, then review
-            exactly what you said after the session.
+            Prepare for interviews across different careers.
+            Choose your field, role, interview style, and difficulty,
+            then answer by typing or using live transcription.
           </p>
 
         </div>
@@ -125,39 +125,18 @@
         <div class="setup-principles">
 
           <div>
-
-            <span>
-              01
-            </span>
-
-            <p>
-              One question at a time.
-            </p>
-
+            <span>01</span>
+            <p>Choose your field.</p>
           </div>
 
           <div>
-
-            <span>
-              02
-            </span>
-
-            <p>
-              Type or transcribe.
-            </p>
-
+            <span>02</span>
+            <p>Answer naturally.</p>
           </div>
 
           <div>
-
-            <span>
-              03
-            </span>
-
-            <p>
-              Review, don't guess.
-            </p>
-
+            <span>03</span>
+            <p>Review what you said.</p>
           </div>
 
         </div>
@@ -169,9 +148,9 @@
           </span>
 
           <p>
-            Stage 1 uses prepared interview question banks.
-            AI-generated questions, contextual follow-ups,
-            and detailed feedback arrive in Stage 2.
+            Stage 1 uses prepared interview banks for major career areas.
+            Stage 2 will use AI to generate deeper questions for any
+            specific job title or experience level.
           </p>
 
         </div>
@@ -183,19 +162,12 @@
         <div class="panel-heading">
 
           <div>
-
-            <span>
-              SESSION CONFIGURATION
-            </span>
-
-            <strong>
-              Build your interview
-            </strong>
-
+            <span>SESSION CONFIGURATION</span>
+            <strong>Build your interview</strong>
           </div>
 
           <span>
-            4 INPUTS
+            5 INPUTS
           </span>
 
         </div>
@@ -213,36 +185,83 @@
 
             <div class="field-copy">
 
-              <label for="jobRole">
-                Role
+              <label for="careerArea">
+                Career area
               </label>
 
               <p>
-                What position are you preparing for?
+                Choose the field closest to your target job.
               </p>
 
             </div>
 
             <select
-              id="jobRole"
-              name="jobRole"
+              id="careerArea"
               required
             >
 
-              <option value="frontend">
-                Frontend Developer
+              <option value="technology">
+                Technology & IT
               </option>
 
-              <option value="software">
-                Software Developer
+              <option value="business">
+                Business & Administration
               </option>
 
-              <option value="qa">
-                QA Engineer
+              <option value="finance">
+                Finance & Accounting
               </option>
 
-              <option value="it-support">
-                IT Support Specialist
+              <option value="marketing">
+                Marketing & Communications
+              </option>
+
+              <option value="sales">
+                Sales & Retail
+              </option>
+
+              <option value="hr">
+                Human Resources
+              </option>
+
+              <option value="customer-service">
+                Customer Service
+              </option>
+
+              <option value="healthcare">
+                Healthcare
+              </option>
+
+              <option value="education">
+                Education
+              </option>
+
+              <option value="hospitality">
+                Hospitality & Tourism
+              </option>
+
+              <option value="engineering">
+                Engineering
+              </option>
+
+              <option value="creative">
+                Design & Creative
+              </option>
+
+              <option value="operations">
+                Operations & Logistics
+              </option>
+
+              <option value="project-management">
+                Project Management
+              </option>
+
+              <option value="research">
+                Research
+              </option>
+
+              <option value="other">
+                Other
               </option>
 
             </select>
@@ -257,38 +276,32 @@
 
             <div class="field-copy">
 
-              <label for="interviewType">
-                Interview mode
+              <label for="jobRole">
+                Job role
               </label>
 
               <p>
-                Choose the type of conversation.
+                Choose a role or enter your own.
               </p>
 
             </div>
 
-            <select
-              id="interviewType"
-              name="interviewType"
-              required
-            >
+            <div class="role-control">
 
-              <option value="behavioral">
-                Behavioral
-              </option>
+              <select
+                id="jobRole"
+                required
+              ></select>
 
-              <option
-                value="technical"
-                selected
+              <input
+                id="customRole"
+                class="custom-role hidden"
+                type="text"
+                placeholder="Type your target role..."
+                maxlength="80"
               >
-                Technical
-              </option>
 
-              <option value="mixed">
-                Mixed
-              </option>
-
-            </select>
+            </div>
 
           </div>
 
@@ -300,19 +313,60 @@
 
             <div class="field-copy">
 
+              <label for="interviewType">
+                Interview mode
+              </label>
+
+              <p>
+                Choose what kind of questions you want.
+              </p>
+
+            </div>
+
+            <select
+              id="interviewType"
+              required
+            >
+
+              <option value="behavioral">
+                Behavioral
+              </option>
+
+              <option value="role-specific">
+                Role-Specific
+              </option>
+
+              <option
+                value="mixed"
+                selected
+              >
+                Mixed
+              </option>
+
+            </select>
+
+          </div>
+
+          <div class="form-field">
+
+            <span class="field-number">
+              04
+            </span>
+
+            <div class="field-copy">
+
               <label for="difficulty">
                 Difficulty
               </label>
 
               <p>
-                Control the depth of the questions.
+                Adjust question complexity and depth.
               </p>
 
             </div>
 
             <select
               id="difficulty"
-              name="difficulty"
               required
             >
 
@@ -338,7 +392,7 @@
           <div class="form-field">
 
             <span class="field-number">
-              04
+              05
             </span>
 
             <div class="field-copy">
@@ -355,7 +409,6 @@
 
             <select
               id="questionCount"
-              name="questionCount"
               required
             >
 
@@ -387,51 +440,38 @@
             <div class="preview-grid">
 
               <div>
+                <small>FIELD</small>
+                <strong id="previewCareer">
+                  Technology & IT
+                </strong>
+              </div>
 
-                <small>
-                  ROLE
-                </small>
-
+              <div>
+                <small>ROLE</small>
                 <strong id="previewRole">
                   Frontend Developer
                 </strong>
-
               </div>
 
               <div>
-
-                <small>
-                  MODE
-                </small>
-
+                <small>MODE</small>
                 <strong id="previewType">
-                  Technical
+                  Mixed
                 </strong>
-
               </div>
 
               <div>
-
-                <small>
-                  LEVEL
-                </small>
-
+                <small>LEVEL</small>
                 <strong id="previewDifficulty">
                   Medium
                 </strong>
-
               </div>
 
               <div>
-
-                <small>
-                  LENGTH
-                </small>
-
+                <small>LENGTH</small>
                 <strong id="previewCount">
                   8 Questions
                 </strong>
-
               </div>
 
             </div>
@@ -482,7 +522,7 @@
         </strong>
 
         <span id="sessionType">
-          Technical
+          Mixed
         </span>
 
         <span id="sessionDifficulty">
@@ -523,11 +563,7 @@
           </div>
 
           <div class="vertical-progress">
-
-            <div
-              id="sidebarProgressBar"
-            ></div>
-
+            <div id="sidebarProgressBar"></div>
           </div>
 
           <span class="progress-stage">
@@ -553,7 +589,7 @@
               class="question-category"
               id="questionCategory"
             >
-              TECHNICAL · MEDIUM
+              ROLE-SPECIFIC · MEDIUM
             </span>
 
           </div>
@@ -684,12 +720,7 @@
           <div class="interview-actions">
 
             <div class="keyboard-note">
-
-              <span>
-                Your answer remains editable
-                until you finish it.
-              </span>
-
+              Your answer remains editable until you finish it.
             </div>
 
             <div class="action-buttons">
@@ -761,9 +792,7 @@
       <div
         class="results-session-line"
         id="resultsSessionLine"
-      >
-        Frontend Developer · Technical · Medium
-      </div>
+      ></div>
 
       <section class="summary-section">
 
@@ -782,59 +811,30 @@
         <div class="summary-grid">
 
           <div class="summary-item">
-
-            <span>
-              COMPLETED
-            </span>
-
-            <strong id="resultCompleted">
-              0 / 0
-            </strong>
-
+            <span>COMPLETED</span>
+            <strong id="resultCompleted">0 / 0</strong>
           </div>
 
           <div class="summary-item">
-
-            <span>
-              TOTAL WORDS
-            </span>
-
-            <strong id="resultWords">
-              0
-            </strong>
-
+            <span>TOTAL WORDS</span>
+            <strong id="resultWords">0</strong>
           </div>
 
           <div class="summary-item">
-
-            <span>
-              ANSWERING TIME
-            </span>
-
-            <strong id="resultTime">
-              00:00
-            </strong>
-
+            <span>ANSWERING TIME</span>
+            <strong id="resultTime">00:00</strong>
           </div>
 
           <div class="summary-item">
-
-            <span>
-              APPROX. FILLERS
-            </span>
-
-            <strong id="resultFillers">
-              0
-            </strong>
-
+            <span>APPROX. FILLERS</span>
+            <strong id="resultFillers">0</strong>
           </div>
 
         </div>
 
         <p class="summary-disclaimer">
           Answering time includes thinking, typing,
-          transcription, and editing. It is not
-          speaking-time measurement.
+          transcription, and editing. It is not speaking-time measurement.
         </p>
 
       </section>
@@ -844,15 +844,8 @@
         <div class="review-heading">
 
           <div>
-
-            <span>
-              TRANSCRIPT REVIEW
-            </span>
-
-            <h2>
-              Your answers
-            </h2>
-
+            <span>TRANSCRIPT REVIEW</span>
+            <h2>Your answers</h2>
           </div>
 
           <small id="reviewCount">
