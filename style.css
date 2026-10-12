@@ -1329,3 +1329,46 @@ input:focus-visible {
     transition: none !important;
   }
 }
+
+.role-control {
+  width: 100%;
+}
+
+.role-control select,
+.custom-role {
+  width: 100%;
+}
+
+.custom-role {
+  min-height: 43px;
+  margin-top: 9px;
+  padding: 0 10px;
+  border: 0;
+  border-bottom: 1px solid var(--navy);
+  border-radius: 0;
+  outline: 0;
+  background: white;
+  color: var(--navy);
+}
+
+.custom-role:focus {
+  border-color: var(--blue);
+}
+
+.preview-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.preview-grid > div:last-child {
+  grid-column: span 2;
+}
+
+@media (max-width: 500px) {
+  .preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-grid > div:last-child {
+    grid-column: auto;
+  }
+}
